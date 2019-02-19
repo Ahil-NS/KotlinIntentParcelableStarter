@@ -7,4 +7,9 @@
     <string name="car">Car</string>
     <string name="jeep">Jeep</string>
     <string name="select_your_vehicle">Select your Vehicle</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
+    <string name="red">RED</string>
+    <string name="finish">FINISH</string>
+    <string name="choose_your_fav_color">Choose your Fav Color</string>
 </resources>
