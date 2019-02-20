@@ -14,9 +14,21 @@ class VehicleActivity : AppCompatActivity() {
 
     //var selectedVehicle = ""
     var selectedVehicle = Vehicle("","")
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_VEHICLE,selectedVehicle)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vehicle)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(savedInstanceState != null){
+            selectedVehicle = savedInstanceState.getParcelable(EXTRA_VEHICLE)
+        }
     }
 
     fun vehicleNextBtnClicked(view: View){

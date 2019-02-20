@@ -12,14 +12,26 @@ import kotlinx.android.synthetic.main.activity_paint_color.*
 
 class PaintColorActivity : AppCompatActivity() {
 
-
     lateinit var vehicle : Vehicle
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_VEHICLE,vehicle)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_paint_color)
         vehicle = intent.extras.getParcelable<Vehicle>(EXTRA_VEHICLE)
-        Toast.makeText(this, vehicle.name, Toast.LENGTH_LONG).show()
     }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(savedInstanceState != null){
+            vehicle = savedInstanceState.getParcelable(EXTRA_VEHICLE)
+        }
+    }
+
 
     fun blueBtnClicked(view: View){
         greenBtn.isChecked = false
