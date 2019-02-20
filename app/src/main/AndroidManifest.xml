@@ -9,11 +9,13 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Controller.PaintColorActivity">
+        <activity android:name=".Controller.Controller.FinishActivity">
         </activity>
-        <activity android:name=".Controller.VehicleActivity">
+        <activity android:name=".Controller.Controller.PaintColorActivity">
         </activity>
-        <activity android:name=".Controller.WelcomeActivity">
+        <activity android:name=".Controller.Controller.VehicleActivity">
+        </activity>
+        <activity android:name=".Controller.Controller.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

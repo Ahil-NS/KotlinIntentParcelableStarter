@@ -1,4 +1,4 @@
-package com.example.kotlinintentparcelablestarter.Controller
+package com.example.kotlinintentparcelablestarter.Controller.Controller
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -13,7 +13,8 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         goGarageBtn.setOnClickListener {
-            val vehicleIntent = Intent(this,VehicleActivity::class.java)
+            val vehicleIntent = Intent(this,
+                VehicleActivity::class.java)
             startActivity(vehicleIntent)
         }
     }
